@@ -42,5 +42,7 @@ VHREDはHREDに、VAEの潜在変数の概念を追加した。
 VAEは潜在変数zに確率分布z∼N(0,1)を仮定したものである。
 
 section6:word2vec
+word2vecはone_hotベクトル表現からembedding表現を得るためのもの。
+
 
 section7:attention mechanism
