@@ -20,7 +20,26 @@ section４:双方向RNN
 文章の推敲や、機械翻訳、フレーム間の補完などのタスクに使用する。
 
 section５:seq2seq
+Seq2seqhはEncoder-Decoderモデルの一種で機械翻訳や機械対話に用いられる。
 
+Encoder
+Takingは文章を単語等のトークン毎に分割し、トークンごとのIDに分割する。
+EmbeddingはIDから、そのトークンを表す分散表現ベクトルに変換する。
+Encoder RNNではベクトルを順番にRNNに入力していく。
+
+Decoder
+Decoder RNNでは Encoder RNN のfinal stateからEmbedding を入力
+生成確率にもとづいてtoken をランダムにSamplingする
+token をEmbedding してDecoder RNN への次の入力にする
+上記を繰り返してtoken を文字列になおす（Detokenize）
+
+HRED
+Seq2Seq+ Context RNNdで過去の発話の履歴を加味した返答をできる。
+Context RNNはEncoder のまとめた各文章の系列をまとめて、これまでの会話コンテキスト全体を表すベクトルに変換する。
+
+VHRED
+VHREDはHREDに、VAEの潜在変数の概念を追加した。
+VAEは潜在変数zに確率分布z∼N(0,1)を仮定したものである。
 
 section6:word2vec
 
