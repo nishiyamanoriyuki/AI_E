@@ -20,7 +20,7 @@ section４:双方向RNN
 文章の推敲や、機械翻訳、フレーム間の補完などのタスクに使用する。
 
 section５:seq2seq
-Seq2seqhはEncoder-Decoderモデルの一種で機械翻訳や機械対話に用いられる。
+Seq2seqはEncoder-Decoderモデルの一種で機械翻訳や機械対話に用いられる。
 
 Encoder
 Takingは文章を単語等のトークン毎に分割し、トークンごとのIDに分割する。
@@ -48,3 +48,12 @@ CBOWモデルはコンテクストからターゲットを推測し、skip-gram�
 
 
 section7:attention mechanism
+attention mechanismは入力と出力のどの単語が関連しているか学習する。
+Seq2seqが中間層が固定次元ベクトルで表されるため長い文章への対応が難しいため、attention mechanismが使われる。
+単語間の予測関連度を，アテンション係数として推定する.
+スコア関数は２つのベクトル間の距離尺度のような関連度(relevance)を学習させる.
+
+
+
+
+
