@@ -43,6 +43,8 @@ VAEは潜在変数zに確率分布z∼N(0,1)を仮定したものである。
 
 section6:word2vec
 word2vecはone_hotベクトル表現からembedding表現を得るためのもの。
+CBOW(continuous bag-of-words)とskip-gramが使われ、skip-gramの方が精度が高いが学習コストも大きい。
+CBOWモデルはコンテクストからターゲットを推測し、skip-gramは中央の単語から前後の複数のコンテクストを予測する。
 
 
 section7:attention mechanism
