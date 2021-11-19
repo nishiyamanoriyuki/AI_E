@@ -6,6 +6,10 @@ Q学習と関数近似法を組み合わせる手法を使用する。Q学習は
 section２:alpha go
 alpha goには、alphago(lee)とalphago(zero)がある。
 
+alphago(lee)は、RollOutPolicy（＝出力はそのマスの着手予想確率）、PolicyNet（＝出力は19×19マスの着手予想確率）,ValueNet（＝出力は現局面の勝率）の学習をする。
+教師あり学習によるRollOutPolicyとPolicyNetの学習、強化学習によるPolicyNetの学習、強化学習によるValueNetの学習を行う。
+強化学習の手法としてモンテカルロ木探索を使用する。
+AlphaGoZeroの特徴は、強化学習のみで作成、特徴入力からヒューリスティックな要素を排除、PolicyNetとValueNetを１つのネットワークに統合、Residual Netの導入、RollOut方策を使用しない。
 
 section3:軽量化高速化技術
 
