@@ -20,7 +20,22 @@ GPGPUの開発環境としてCUDAやopenclがある。
 プルーニングは重みが閾値以下のニューロンを削減する。
 
 section４:応用モデル
+MobileNetsはDepthwiseConvolutionとPointwise Convolutionの組み合わせで軽量化を実現した。
+Depthwise Convolutionはチャンネル数とフィルタ数が１であり、Pointwise Convolutionはフィルタサイズが１＊１である。
+DenseNetは前方の各層からの出力全てが後方の層への入力として用いられる。
+成⻑率(Growth Rate)と呼ばれるハイパーパラメータが存在し、各ブロック毎にk個ずつ特徴マップのチャネル数が増加していく。
+Transition Layerと呼ばれる層でダウンサンプリングをしてDence block同士をつなぐ。
+Batch Norm Layerはレイヤー間を流れるデータの分布を、ミニバッチ単位で平均が0・分散が1になるように正規化する。
+Layer NormはH x W x Cの全てのpixelを正規化する。
+Instance Normは各sampleの各チャンネルごとに正規化する。
+WaveNetは時系列データに対して畳み込み（Dilated convolution）を使う。（層が深くなるにつれて畳み込みリンクを離し、パラメータ数に対する受容野が広い。）
 
 section５:Transformer
 
+
+
 section6:物体検知・セグメンテーション
+
+
+
+
