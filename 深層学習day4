@@ -31,8 +31,9 @@ Instance Normは各sampleの各チャンネルごとに正規化する。
 WaveNetは時系列データに対して畳み込み（Dilated convolution）を使う。（層が深くなるにつれて畳み込みリンクを離し、パラメータ数に対する受容野が広い。）
 
 section５:Transformer
-
-
+Transformerはrnnを使わずにattentionだけで構成されている。
+attentionは辞書型オブジェクトであり、query(検索クエリ)に一致するkeyを索引し、対応するvalueを取り出す操作とみなすことができる。
+注意機構には自己注意機構とソースターゲット機構の２種類があり、自己注意機構が重要である。
 
 section6:物体検知・セグメンテーション
 
