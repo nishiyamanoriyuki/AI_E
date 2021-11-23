@@ -36,6 +36,11 @@ attentionは辞書型オブジェクトであり、query(検索クエリ)に一�
 注意機構には自己注意機構とソースターゲット機構の２種類があり、自己注意機構が重要である。
 
 section6:物体検知・セグメンテーション
+物体検出の評価指標としてIoU（Intersection over Union）があり、2つの領域が「どれくらい重なっているか」を表す指標である。
+２段階検出器（fastRcnn）と１段階検出器（SSD、YOLO）があり、２段階検出器の方が精度が高く速度が遅い。
+SSDはVGG16の特徴量抽出の１部を使用している。
+Semantic Segmentationでは、convolutionおよびpoolingしたあとにupsamplingしている。
+エンコーダー、デコーダモデルのUnetでは、エンコーダーからデコーダーへのスキップ層があり、DilatedConvolutionで受容野を広げる工夫がされている。
 
 
 
